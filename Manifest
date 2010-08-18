@@ -1,0 +1,9 @@
+CHANGELOG
+Manifest
+README.rdoc
+Rakefile
+init.rb
+lib/multi_column_search.rb
+spec/models.rb
+spec/multi_column_search_spec.rb
+spec/spec_helper.rb

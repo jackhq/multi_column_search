@@ -1,0 +1,36 @@
+= Multi Column Search
+
+Quick and dirty multi column LIKE searches. Need to search accross multiple columns, like company(name, address, city, state, zip)
+
+Running lots of queries or have a large data set? You should probably upgrade to a real search back-end already!
+
+== Examples
+
+Add a search method to your model by calling multi_column_search with the fields you want to search.
+
+  class Company
+    multi_column_search :name, :address, :city, :state, :zip
+  end
+ 
+Search for a single or multi value across all searched columns.
+
+  Company.search('Sam Comp')             # => any company with name, address, city, state, zip containing with Sam Comp
+  
+== Install
+
+Rails 3 Gem
+
+   # add to your gemfile in bundler
+   bundle install
+   
+   
+== Docs
+
+http://rdoc.info/projects/jackhq/multi_column_search
+
+Homepage:: http://github.com/jackhq/multi_column_search
+License:: Copyright (c) 2010 Jack Russell Software Company <mailto:team@jackrussellsoftware.com>, released under the MIT license.
+
+== Credits
+
+Completely inspired from "simple_column_search" by Elijah Miller : http://github.com/jqr/simple_column_search
