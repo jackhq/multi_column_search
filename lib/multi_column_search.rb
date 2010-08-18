@@ -28,9 +28,8 @@ module MultiColumnSearch
         acc << columns.collect { |column| "#{table_name}.#{column} #{like} '#{pattern}'" }  
       
       end
-      conditions = conditions.map { |c| "(" + c.join(' OR ') + ")" }.join(' OR ')
-      puts conditions
-      where conditions
+      
+      where conditions.map { |c| "(" + c.join(' OR ') + ")" }.join(' OR ')
       }     
   end
   
